@@ -14,19 +14,24 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "networkSecurityConfig": "./network_security_config.xml"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": []
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Camper Cafe to access your camera to take photos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Camper Cafe to access your photos."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "597371ee-0275-4192-8744-a8e7811e1da6"
+      }
+    }
   }
 }

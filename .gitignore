@@ -1,43 +1,31 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+@"
 node_modules/
-
-# Expo
 .expo/
+.expo-shared/
 dist/
 web-build/
-expo-env.d.ts
-
-# Native
-.kotlin/
 *.orig.*
 *.jks
 *.p8
 *.p12
 *.key
 *.mobileprovision
-
-# Metro
 .metro-health-check*
-
-# debug
 npm-debug.*
 yarn-debug.*
 yarn-error.*
-
-# macOS
+*.log
 .DS_Store
 *.pem
-
-# local env files
 .env*.local
-
-# typescript
 *.tsbuildinfo
+build/
+.gradle/
+android/app/build/
+ios/Pods/
+"@ | Out-File -Encoding utf8 .gitignore
 
-app-example
-
-# generated native folders
-/ios
-/android
+# 3. Inicializa git si no lo has hecho
+git init
+git add .
+git commit -m "Initial commit"

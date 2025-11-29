@@ -24,7 +24,9 @@ export default {
         NSLocationWhenInUseUsageDescription: "Esta aplicación necesita acceso a tu ubicación para mostrar el mapa de la cafetería."
       }
     },
+
     plugins: [
+      "expo-router",
       [
         "expo-image-picker",
         {
@@ -37,6 +39,12 @@ export default {
           cameraPermission: "La aplicación necesita acceso a la cámara para tomar fotos de las categorías."
         }
       ]
-    ]
+    ],
+
+    extra: {
+      eas: {
+        projectId: "597371ee-0275-4192-8744-a8e7811e1da6"
+      }
+    }
   }
 };
